@@ -1,0 +1,19 @@
+posts
+    -author
+    -title
+    -slug
+    -image
+    -views
+    -body
+    -quote
+
+categories
+    -name
+    -slug
+    -post_id
+
+
+comments
+    -name
+    -email
+    -comment
