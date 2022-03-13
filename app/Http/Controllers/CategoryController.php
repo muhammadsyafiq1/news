@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -14,7 +15,11 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::all();
+
+        return view('admin.table_kategori', compact(
+            'categories'
+        ));
     }
 
     /**
@@ -35,7 +40,10 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $data['slug'] = Str::slug($request->name);
+        Category::create($data);
+        return redirect()->back()->with('status','Kategori berhasil ditambahkan');
     }
 
     /**
@@ -67,9 +75,15 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, $id)
     {
-        //
+        $data = Category::find($id);
+        $data->update([
+            'name',
+            'slug' => Str::slug($data->name),
+        ]);
+        return redirect()->back()->with('status','Kategori berhasil diupdate');
+
     }
 
     /**
@@ -78,8 +92,11 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    public function destroy( $id)
     {
-        //
+        $data = Category::find($id);
+        $data->delete();
+        return redirect()->back()->with('status','Kategori berhasil dihapus');
+        
     }
 }

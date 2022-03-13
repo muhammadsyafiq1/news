@@ -5,8 +5,8 @@
                 <img src="/admin/assets/images/avatars/avatar1.png">
             </div>
             <div class="sidebar-profile-info">
-                    <p>David Doe</p>
-                    <span>david@gmail.com</span>
+                    <p>{{Auth::user()->name}}</p>
+                    <span>{{Auth::user()->email}}</span>
             </div>
         </div>
         <div class="page-sidebar-menu">
@@ -14,17 +14,27 @@
                 <ul class="sidebar-menu list-unstyled">
                     <li>
                         <a href="{{route('dashboard')}}" class="waves-effect waves-grey active">
-                            <i class="material-icons">settings_input_svideo</i>Dashboard
+                            Dashboard
                         </a>
                     </li>
                     <li>
                         <a href="forms.html" class="waves-effect waves-grey">
-                            <i class="material-icons">mode_edit</i>Post
+                            Berita
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('categories.index')}}" class="waves-effect waves-grey">
+                            Kategori berita
                         </a>
                     </li>
                     <li>
                         <a href="tables.html" class="waves-effect waves-grey">
-                            <i class="material-icons">grid_on</i>Category
+                            Informasi Kelurahan
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tables.html" class="waves-effect waves-grey">
+                            Data kelurahan
                         </a>
                     </li>
                 </ul>

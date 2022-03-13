@@ -1,6 +1,6 @@
 <!-- Header news -->
 <header class="bg-light">
-    @include('includes.nav-top')
+    
     <!-- Navbar  -->
     <!-- Navbar menu  -->
 <div class="navigation-wrap navigation-shadow bg-white">
@@ -12,25 +12,19 @@
             </div>
         </div>
         <figure class="mb-0 mx-auto">
-            <a href="/homepage-v1.html">
-                <img src="/news/images/placeholder/logo.jpg" alt="" class="img-fluid logo">
-            </a>
+            <h5>
+            Kelurahan Langgini
+
+            </h5>
         </figure>
 
         <div class="collapse navbar-collapse justify-content-between" id="main_nav99">
             <ul class="navbar-nav ml-auto ">
-                <li class="nav-item"><a class="nav-link" href="{{route('home')}}"> HOME </a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link active dropdown-toggle" href="#" data-toggle="dropdown"> About </a>
-                    <ul class="dropdown-menu dropdown-menu-left">
-                        <li><a class="dropdown-item" href="/about-us.html"> Style 1 </a>
-                        </li>
-                        <li><a class="dropdown-item" href="/about-us-v1.html"> Style 2 </a></li>
-
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#"> Category </a></li>
-                <li class="nav-item"><a class="nav-link" href="/contact.html"> contact </a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('home')}}"> Home </a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('home')}}"> Profil </a></li>
+                <li class="nav-item"><a class="nav-link" href="#"> Data kelurahan </a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact.html"> Kontak </a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('login')}}">Login </a></li>
             </ul>
             <!-- Search content bar.// -->
         </div> <!-- navbar-collapse.// -->

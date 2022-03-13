@@ -11,61 +11,46 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-3">
+    <div class="col-4">
         <div class="card info-card">
             <div class="card-body">
-                <h5 class="card-title">Revenue</h5>
+                <h5 class="card-title">Penduduk</h5>
                 <div class="info-card-text">
-                    <h3>792.8 $</h3>
-                    <span class="info-card-helper">Last Month</span>
+                    <h3>134</h3>
+                    
                 </div>
                 <div class="info-card-icon">
-                    <i class="material-icons">trending_up</i>
+                    <i class="fa fa-users"></i>
                 </div>
             </div>
             <div id="sparkline-bar"></div>
         </div>
     </div>
-    <div class="col-3">
+    <div class="col-4">
         <div class="card info-card">
             <div class="card-body">
-                <h5 class="card-title">Revenue</h5>
+                <h5 class="card-title">Berita</h5>
                 <div class="info-card-text">
-                    <h3>792.8 $</h3>
-                    <span class="info-card-helper">Last Month</span>
+                    <h3>123</h3>
+                    
                 </div>
                 <div class="info-card-icon">
-                    <i class="material-icons">trending_up</i>
+                    <i class="fa fa-list"></i>
                 </div>
             </div>
             <div id="sparkline-bar"></div>
         </div>
     </div>
-    <div class="col-3">
+    <div class="col-4">
         <div class="card info-card">
             <div class="card-body">
-                <h5 class="card-title">Revenue</h5>
+                <h5 class="card-title">Kunjungan </h5>
                 <div class="info-card-text">
-                    <h3>792.8 $</h3>
-                    <span class="info-card-helper">Last Month</span>
+                    <h3>792</h3>
+                    
                 </div>
                 <div class="info-card-icon">
-                    <i class="material-icons">trending_up</i>
-                </div>
-            </div>
-            <div id="sparkline-bar"></div>
-        </div>
-    </div>
-    <div class="col-3">
-        <div class="card info-card">
-            <div class="card-body">
-                <h5 class="card-title">Revenue</h5>
-                <div class="info-card-text">
-                    <h3>792.8 $</h3>
-                    <span class="info-card-helper">Last Month</span>
-                </div>
-                <div class="info-card-icon">
-                    <i class="material-icons">trending_up</i>
+                    <i class="fa fa-eye"></i>
                 </div>
             </div>
             <div id="sparkline-bar"></div>

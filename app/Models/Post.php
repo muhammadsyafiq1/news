@@ -18,11 +18,12 @@ class Post extends Model
         'views',
         'body',
         'quote',
+        'category_id'
     ];
 
 
     public function categories()
     {
-        return $this->hasMany(Comment::class, 'post_id');
+        return $this->belongsTo(Comment::class, 'post_id');
     }
 }

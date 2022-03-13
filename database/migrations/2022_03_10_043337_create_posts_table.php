@@ -23,6 +23,7 @@ class CreatePostsTable extends Migration
             $table->text('body');
             $table->integer('view')->default(0);
             $table->string('quote')->nullable();
+            $table->integer('category_id');
             $table->timestamps();
         });
     }
