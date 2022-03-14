@@ -40,6 +40,9 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nama_category' => 'required|max:20',
+        ]);
         $data = $request->all();
         $data['slug'] = Str::slug($request->name);
         Category::create($data);
@@ -75,14 +78,16 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        $data = Category::find($id);
-        $data->update([
-            'name',
-            'slug' => Str::slug($data->name),
+        $request->validate([
+            'name' => 'required|max:20',
         ]);
-        return redirect()->back()->with('status','Kategori berhasil diupdate');
+        $category = Category::findOrFail($request->id);
+        $category->name = $request->name;
+        $category->slug = Str::slug($request->name);
+        $category->save();
+        return redirect()->back()->with('status','Kategori  Berhasil Diupdate');
 
     }
 

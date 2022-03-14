@@ -18,4 +18,5 @@
         </div><!-- App Container -->
         
         @include('includes.dashboard.footer')
+        @stack('scripts')
 </html>
